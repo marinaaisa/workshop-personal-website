@@ -1,0 +1,30 @@
+.floating-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgba(255, 255, 255, 0.58);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  .floating {
+    -webkit-font-smoothing: antialiased;
+    transition: 300ms all;
+    position: absolute;
+    font-size: 10vw; // rand 8,9,10
+    animation: 10s floatUp ease-in infinite;
+    top: calc(100% + 2em);
+    &:before {
+      display: inline-block;
+    }
+  }
+}
+
+@keyframes floatUp {
+  0% { top: calc(100% + 2em); transform: rotate(0deg);}
+  100% { top: -2em; transform: rotate(359deg); }
+}
+
+@keyframes slowRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}

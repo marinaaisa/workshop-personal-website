@@ -1,0 +1,142 @@
+@include font-face(Graphik Bold, fonts/Graphik-Bold);
+@include font-face(Graphik Semibold, fonts/Graphik-Semibold);
+@include font-face(Graphik Regular, fonts/Graphik-Regular);
+@include font-face(Graphik Light, fonts/Graphik-Light);
+
+$font-base-color:             $secondary-light;
+$font-family-base:            'Graphik Regular', sans-serif;
+$font-family-semibold:        'Graphik Semibold', sans-serif;
+$font-family-light:           'Graphik Light', sans-serif;
+$line-height-base:            1.5;
+$fs-base:                     1.6rem;
+$fs-base-responsive:          1.4rem;
+$fs-large:                    3rem;
+$fs-large-responsive:         2rem;
+$fs-small:                    $fs-base-responsive;
+$fs-small-responsive:         1rem;
+$fs-h1:                       $fs-large;
+$fs-h2:                       $fs-large;
+$fs-h3:                       $fs-base;
+$fs-h4:                       $fs-base;
+$fs-h5:                       $fs-base;
+$fs-h6:                       $fs-small;
+
+html {
+  font-size: 62.5%; /* Now 10px = 1rem! */
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $fs-base-responsive;
+  color: $font-base-color;
+  line-height: $line-height-base;
+  @media (min-width: $screen-sm){
+    font-size: $fs-base;
+  }
+}
+
+@mixin content-blocks{
+  & + p, & + ul, & + ol, & + blockquote, & + .content-block{
+   @content;
+  }
+}
+
+p,ul,ol,blockquote,.content-block{
+  margin-top: 0;
+  margin-bottom: 1.8em;
+  @include content-blocks{
+    margin-top: -.8em;
+  }
+
+}
+
+.title {
+  margin: 5rem 0 2rem 0;
+  color: $secondary;
+  font-family: $font-family-semibold;
+  @media (min-width: $screen-sm){
+    margin: 7rem 0 5rem 0;
+  }
+}
+
+ul{
+  padding-left: 1.1em;
+}
+
+li{
+  margin-bottom: .25em;
+}
+
+blockquote {
+  border-left: 4px solid $primary;
+  padding-left: 1em;
+  font-size: $fs-h3;
+  font-weight: bold;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  max-width: 600px
+}
+
+h1,.h1{
+  font-size: $fs-large-responsive;
+  margin-top: 0;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  @media (min-width: $screen-sm){
+    font-size: $fs-h1;
+  }
+}
+
+h2,.h2{
+  font-size: $fs-h2;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h3,.h3{
+  font-size: $fs-h3;
+  margin-top: 0;
+  margin-bottom: 1rem
+}
+
+h4,.h4{
+  font-size: $fs-h3;
+  margin-top: 0;
+  margin-bottom: 1rem
+}
+
+h5,.h5{
+  font-size: $fs-h3;
+  margin-top: 0;
+  margin-bottom: 1rem
+}
+
+h6,.h6{
+  font-size: $fs-h3;
+  margin-top: 0;
+  margin-bottom: 1rem
+}
+
+//extend sizes
+.s1{font-size: $fs-h1;}
+.s2{font-size: $fs-h2;}
+.s3{font-size: $fs-h3;}
+.s4{font-size: $fs-h4;}
+.s5{font-size: $fs-h5;}
+.s5{font-size: $fs-h6;}
+.large{font-size: $fs-large;}
+.small{font-size: $fs-small;}
+
+hgroup{
+  @include last-margin;
+  h1,.s1{
+    margin-bottom: .2em;
+    + *{
+      font-weight: normal;
+    }
+  }
+}

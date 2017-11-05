@@ -1,0 +1,90 @@
+.portfolio {
+  width: 100%;
+  position: relative;
+  @extend .container;
+
+  &__title {
+    @extend .title;
+    &--coming {
+      color: $secondary-lighter;
+    }
+  }
+
+  &__content {
+	  vertical-align: middle;
+    padding-left: 0;
+    padding-right: 0;
+    @include make-row();
+  }
+  &__item-full {
+    @include make-sm-column(12);
+    @include margin-bottom(20px);
+  }
+  &__item-half {
+    @include make-sm-column(6);
+    @include margin-bottom(20px);
+  }
+  &__client {
+    @media (min-width: $screen-sm){
+      display: none;
+    }
+  }
+  &__description {
+    color: $secondary;
+    padding-top: 1rem;
+    @media (min-width: $screen-sm){
+      display: none;
+    }
+  }
+  &__thumb-inner {
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+    display: block;
+
+    &:hover {
+      .portfolio__thumb-hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__thumb-hover {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    @media (max-width: $screen-sm){
+      display: none;
+    }
+  }
+
+  &__thumb-description {
+    position: absolute;
+    bottom: 5.8rem;
+    left: 4rem;
+    line-height: initial;
+    text-align: left;
+    color: white;
+    &--dark {
+      @extend .portfolio__thumb-description;
+      color: $secondary;
+    }
+  }
+  &__thumb-client {
+    position: absolute;
+    bottom: 3.5rem;
+    left: 4rem;
+    text-align: left;
+    color: white;
+    font-family: $font-family-light;
+    &--dark {
+      @extend .portfolio__thumb-client;
+      color: $secondary;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+- university: Everywhere
+  studies: Self-learning
+  description: This is how I learnt the 80% of what I know now and how I improve it.
+  learnt: "#ProductDesign #Prototyping #Coding"
+  place: Everywhere
+  finish_time: Always
+  active: active
+  image: self-learning
+  selflearning: From each job, class, co-worker, book, article, meet-up or life experience
+  learning: "#Unity #A-frame #React #UIAnimation #Prototyping"
+- university: Hong Kong University of Science & Technology (HKUST)
+  universityurl: http://www.ust.hk/
+  studies: Engineering Exchange Student
+  description: Exchange student for one semester at one of the top universities in Asia.
+  learnt: "#ProductDesign #Innovation #EngineeringSubjects #SurviveInHongKongAndAsia #CulturalDiversity"
+  place: Hong Kong, HK
+  start_time: Aug'15
+  finish_time: Jan'16
+  image: hkust
+- university: Helsinki Metropolia University
+  universityurl: http://www.metropolia.fi/en/
+  studies: Media Engineering, Bachelor Degree
+  description: I studied my university degree in the largest and the most international University of Applied Sciences in Finland.
+  learnt: "#EngineeringSubjects #BasicsOfProgramming #StudyAndLiveAbroad #CulturalDiversity #SurviveFinnishWinters #GrowingAsAPerson"
+  place: Helsinki, FIN
+  start_time: Aug'13
+  finish_time: Dec'16
+  image: metropolia

@@ -1,0 +1,50 @@
+.footer {
+	&__main {
+		padding: 50px 0;
+		background-color: $background-secondary;
+		border-bottom: 1px solid darken($secondary-light,40%);
+	}
+
+	&__container {
+		@extend .container;
+	}
+	&__contact {
+		text-align: center;
+	}
+	&__logo {
+		height: 5rem;
+		width: 18rem;
+		display: inline-block;
+		margin-bottom: 1em;
+	}
+
+	&__info {
+		background-color: $background-secondary;
+		padding: 1.5em 0;
+	}
+
+	&__copyright {
+		line-height: $fs-h1;
+		text-align: center;
+		@media (min-width: $screen-sm) {
+			text-align: inherit;
+			@include make-sm-column(10);
+		}
+	}
+
+	&__top-page {
+		@extend .reset-link;
+		color: $text-negative;
+		@include make-sm-column(2);
+		display: block;
+		text-align: center;
+		font-size: $fs-h1;
+		line-height: 1;
+		-webkit-transition: 1s;
+		-moz-transition: 1s;
+		transition: 1s;
+		@media (min-width: $screen-sm){
+			text-align: right;
+		}
+	}
+}

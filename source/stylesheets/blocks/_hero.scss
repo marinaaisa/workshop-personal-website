@@ -1,0 +1,84 @@
+.hero {
+  width: 100%;
+  background: $background-secondary;
+  text-align: center;
+  position: relative;
+
+  .hero__content {
+	  vertical-align: middle;
+    @extend .container;
+  }
+
+  .hero__text {
+    position: relative;
+    top: 39%;
+    background: white;
+    min-height: 74px;
+    margin-bottom: 2rem;
+    padding: 0;
+    width: 100%;
+    @media (min-width: $screen-sm){
+      width: 48%;
+      position: absolute;
+      min-height: 0;
+      margin-bottom: 0;
+    }
+    @media (min-width: $screen-md){
+      width: 40%;
+    }
+    @media (min-width: $screen-lg){
+      width: 30%;
+    }
+    @media (min-width: $screen-xlg){
+      width: 40rem;
+    }
+
+    h1 {
+      margin-bottom: 0;
+      padding: .7rem 2rem;
+      text-align: left;
+      transition:
+        background-color 0.3s ease-out,
+    }
+  }
+
+  .hero__profile {
+    width: 50%;
+    margin-bottom: -8px;
+    @media (min-width: $screen-sm){
+      float: right;
+      margin-bottom: 0;
+    }
+  }
+
+  .hero__image {
+  	height: 90px;
+  	width: auto;
+  	@include margin-bottom(50px);
+
+    svg {
+      opacity: .2;
+    }
+  }
+
+  .hero__button {
+  	margin-top: 2em;
+  }
+
+  @keyframes blink {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .hero-text--typing::after {
+    content: '|';
+    animation: blink 500ms infinite;
+    color: $primary;
+  }
+  &__waving {
+    width: 27px;
+    @media (min-width: $screen-sm){
+      width: 36px;
+    }
+  }
+}

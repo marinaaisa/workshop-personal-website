@@ -1,0 +1,87 @@
+---
+title: Product Designer & Front-end Developer
+body: home
+layout: home
+---
+<div class="hero" id="hero">
+	<div class="hero__content">
+    <img src="/images/marina-aisa-photo.jpg" class="hero__profile" alt="Marina Aisa Picture" />
+    <div class="hero__text">
+      <h1 id="hero-text"> <img class="hero__waving" src="images/waving-hand.gif" alt="hello"> <span id="hero-text-content"></span></h1>
+    </div>
+	</div>
+</div>
+<div id="portfolio" class="portfolio">
+  <div class="portfolio__title">
+    <h1>Portfolio <any emoji="writing-hand" emoji-tone="light"></any></h1>
+  </div>
+  <div class="portfolio__content">
+    <%= partial "partials/portfolio" %>
+  </div>
+</div>
+<div class="about" id="about">
+  <div class="about__container">
+    <div class="about__title">
+      <h1>About Marina <any emoji="thinking-face""></any></h1>
+    </div>
+    <div class="about__content">
+      <p>I’m a <span class="about__content--important">Product Designer (UI/UX) and Front-End Developer</span> based in <span class="about__content--important">Barcelona</span>. I studied an engineering degree in Helsinki and Hong Kong, worked in big corporations and innovative startups and traveled to almost every capital in Europe and Asia. I'm interested in new technologies as VR and AR, also in politics, feminism and LGBT rights. My surname is Aragonese, as Zaragoza (Spain), where I was born 22 years ago with my two triplet brothers.</p>
+    </div>
+  </div>
+</div>
+<div class="experience">
+  <div class="experience__container">
+    <div class="experience__title">
+      <h1>Work Experience <any emoji="woman-technologist"></any></h1>
+    </div>
+    <ul class="experience__content">
+      <%= partial "partials/work-experience" %>
+    </ul>
+    <div class="experience__title">
+      <h1>Education <any emoji="nerd-face"></any></h1>
+    </div>
+    <ul class="experience__content">
+      <%= partial "partials/education-experience" %>
+    </ul>
+  </div>
+</div>
+<div class="call-to-action">
+  <div class="call-to-action__container">
+    <div class="call-to-action__image">
+      <img src="images/professionals.png">
+    </div>
+    <div class="call-to-action__text">
+      <p>
+        If you want to know what other amazing <any emoji="two-hearts"></any> professionals that I admire and I have worked with think about me <any emoji="flushed-face"></any> , check my <a target="_blank" href="https://www.linkedin.com/in/marinaaisa/" class="ani linkedin"><span>Linkedin</span></a>.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="map">
+  <div class="map__container">
+    <div class="map__title">
+      <h1>Hobby: Discovering the world <any emoji="rocket"></h1>
+    </div>
+    <div class="map__content">
+      <div class="map__text">
+        <p>
+          These are all the countries that I have <span class="map__text--visited">visited</span> or <span class="map__text--lived">lived in</span>.
+          <br>USA coming <any emoji="soon-arrow">
+        </p>
+      </div>
+      <div class="map__map">
+        <div id="map"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="dribbble">
+  <div class="dribbble__container">
+    <p class="dribbble__text">
+      More designs?
+      Check my <a target="_blank" href="https://dribbble.com/MarinaAisa" class="ani dribbble"><span>Dribbble</span></a>.
+    </p>
+    <ul class="dribbble__posts"></ul>
+  </div>
+</div>
+<%= partial "partials/footer" %>

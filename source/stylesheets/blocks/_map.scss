@@ -1,0 +1,65 @@
+.map {
+  position: relative;
+  @include margin-bottom(7.5rem);
+
+  &__container {
+    @extend .container;
+  }
+
+  &__title {
+    @extend .title;
+  }
+
+  &__content {
+    font-size: $fs-base;
+    display: table;
+    font-weight: initial;
+    letter-spacing: -.2px;
+    @media (min-width: $screen-sm){
+      padding-right: 2rem;
+    }
+  }
+
+  &__text {
+    width: 100%;
+    @media (min-width: $screen-sm){
+      width: 30%;
+      display: table-cell;
+      vertical-align: middle;
+    }
+  	&--visited {
+      color: $primary;
+      font-family: $font-family-base;
+    }
+    &--lived {
+      color: $secondary;
+      font-family: $font-family-base;
+    }
+  }
+  &__map {
+    width: 100%;
+    @media (min-width: $screen-md){
+      width: 70%;
+    }
+  }
+  #map {
+    width: 220px;
+    margin: 0 auto;
+    height: 150px;
+
+    @media (min-width: $screen-xs){
+      width: 320px;
+      height: 200px;
+    }
+
+    @media (min-width: $screen-sm){
+      width: 400px;
+      height: 300px;
+    }
+
+    @media (min-width: $screen-md){
+      width: 750px;
+      height: 400px;
+    }
+  }
+}

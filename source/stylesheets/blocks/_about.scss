@@ -1,0 +1,50 @@
+.about {
+  position: relative;
+
+  &__container {
+    @extend .container;
+  }
+
+  &__title {
+    @extend .title;
+  }
+
+  &__content {
+    font-size: $fs-base;
+    line-height: 1.7;
+    font-weight: initial;
+    letter-spacing: -.2px;
+    @media (min-width: $screen-sm){
+      font-size: 2.1rem;
+    }
+    p {
+      margin-bottom: 0;
+    }
+    &--important {
+      color: $secondary;
+    }
+  }
+
+  &__profile {
+    width: 50%;
+    margin-bottom: -8px;
+    @media (min-width: $screen-sm){
+      float: right;
+      margin-bottom: 0;
+    }
+  }
+
+  &__image {
+  	height: 90px;
+  	width: auto;
+  	@include margin-bottom(50px);
+
+    svg {
+      opacity: .2;
+    }
+  }
+
+  &__button {
+  	margin-top: 2em;
+  }
+}
