@@ -1,21 +1,28 @@
-<% data.portfolio.each do |s| %>
-  <div class="portfolio__item-<%= s.col %>">
-    <a target="_blank" href="<%= s.url %>" class="portfolio__thumb-inner <% if s.disabled %>disabled<% end %>">
-      <div class="portfolio__thumb-hover" style="background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, <%= s.color_bg %> 70%);">
-        <h3 class="portfolio__thumb-description<% if s.color_text_dark %>--dark<% end %>">
-          <%= s.des %> <% if s.disabled %>(Extended content coming soon)<% end %>
-        </h3>
-        <h3 class="portfolio__thumb-client<% if s.color_text_dark %>--dark<% end %>">
-          Client: <%= s.client %>
-        </h3>
-      </div>
-      <img alt="<%= s.name %>" src="/images/portfolio/<%= s.img %>">
-    </a>
-    <div class="portfolio__description">
-      <%= s.des %>
-    </div>
-    <div class="portfolio__client">
-      <%= s.client %>
-    </div>
+<div id="portfolio" class="portfolio">
+  <div class="portfolio__title">
+    <h1>Portfolio <any emoji="writing-hand" emoji-tone="light"></any></h1>
   </div>
-<% end %>
+  <div class="portfolio__content">
+    <% data.portfolio.each do |s| %>
+      <div class="portfolio__item-<%= s.col %>">
+        <a target="_blank" href="<%= s.url %>" class="portfolio__thumb-inner <% if s.disabled %>disabled<% end %>">
+          <div class="portfolio__thumb-hover" style="background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, <%= s.color_bg %> 70%);">
+            <h3 class="portfolio__thumb-description<% if s.color_text_dark %>--dark<% end %>">
+              <%= s.des %> <% if s.disabled %>(Extended content coming soon)<% end %>
+            </h3>
+            <h3 class="portfolio__thumb-client<% if s.color_text_dark %>--dark<% end %>">
+              Client: <%= s.client %>
+            </h3>
+          </div>
+          <img alt="<%= s.name %>" src="/images/portfolio/<%= s.img %>">
+        </a>
+        <div class="portfolio__description">
+          <%= s.des %>
+        </div>
+        <div class="portfolio__client">
+          <%= s.client %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
