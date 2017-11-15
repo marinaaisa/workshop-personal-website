@@ -7,8 +7,8 @@ The whole workshop will be based in the instructor's website, with different exe
 You DO NOT NEED any prior coding experience, everything will be explained and you can go at your own pace. The instructor will also be there to help you with whatever you need.
 
 ## What do you need for this workshop?
-- You need to bring a laptop for the workshop.
-- Also you need to prepare content that you will use to create your website.
+- You need to bring a laptop, it doesn't matter if it's a Mac, Windows or Linux.
+- You need to prepare your own content that you will use to create your website.
   - Description of yourself
   - Picture of yourself
   - Design portfolio: image, title and client name.
