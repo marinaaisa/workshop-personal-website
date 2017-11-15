@@ -6,12 +6,19 @@ The whole workshop will be based in the instructor's website, with different exe
 
 You DO NOT NEED any prior coding experience, everything will be explained and you can go at your own pace. The instructor will also be there to help you with whatever you need.
 
+## What do you need for this workshop?
+- You need to bring a laptop for the workshop.
+- Also you need to prepare content that you will use to create your website.
+  - Description of yourself
+  - Picture of yourself
+  - Design portfolio: image, title and client name.
+  - Work experience: title position, company, description, picture, place and time.
+
 ## The THEORY
-You will find my presentation in this <a href="https://www.dropbox.com/s/0uuroocl4doy617/workshop_marina.key?dl=0">link</a> where you can get to know the theory behind the exercises we are going to do in this workshop.
+You will find my presentation in this <a href="https://www.dropbox.com/s/e1d52bxx8mhj084/workshop_personalwebsite_marinaaisa.pdf?dl=0">link</a> where you can get to know the theory behind the exercises we are going to do in this workshop.
 
 ## Exercises
 - Exercise 1: Clone the files from Github, install all the dependencies and run Middleman. Congrats, you have already done it :)
-- Exercise 2: describe yourself with TheaterJS
 - Exercise 2: describe yourself with TheaterJS
 - Exercise 3: build your portfolio with Data
 - Exercise 4: write your own work experience with Data
