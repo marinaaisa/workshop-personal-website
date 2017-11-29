@@ -34,12 +34,19 @@ RUN \
   echo '\n# Node.js\nexport PATH="node_modules/.bin:$PATH"' >> /root/.bashrc
 
 WORKDIR /app
-ONBUILD ADD . /app
+ADD . /app
 
 RUN gem install middleman
 
 RUN gem install bundler
 
-CMD ["bash"]
+RUN cd /app && bundle install
+
+#RUN cd /app && npm install 
+
+RUN export RUBYOPT="-KU -E utf-8:utf-8"
+
+
+CMD ["bundle" "exec" "middleman" "server"]
 
 EXPOSE 4567
