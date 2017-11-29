@@ -19,19 +19,8 @@ RUN apt-get install -y python python-dev python-pip python-virtualenv
 RUN rm -rf /var/lib/apt/lists/*
 
 # install nodejs
-RUN \
-  cd /tmp && \
-  wget http://nodejs.org/dist/node-latest.tar.gz && \
-  tar xvzf node-latest.tar.gz && \
-  rm -f node-latest.tar.gz && \
-  cd node-v* && \
-  ./configure && \
-  CXX="g++ -Wno-unused-local-typedefs" make && \
-  CXX="g++ -Wno-unused-local-typedefs" make install && \
-  cd /tmp && \
-  rm -rf /tmp/node-v* && \
-  npm install -g npm && \
-  echo '\n# Node.js\nexport PATH="node_modules/.bin:$PATH"' >> /root/.bashrc
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
+RUN apt-get install -y nodejs
 
 WORKDIR /app
 ADD . /app
@@ -40,13 +29,15 @@ RUN gem install middleman
 
 RUN gem install bundler
 
-RUN cd /app && bundle install
-
-#RUN cd /app && npm install 
-
-RUN export RUBYOPT="-KU -E utf-8:utf-8"
-
-
-CMD ["bundle" "exec" "middleman" "server"]
+RUN bundle install
 
 EXPOSE 4567
+
+RUN npm install 
+
+
+
+ENV RUBYOPT="-KU -E utf-8:utf-8"
+CMD ["bash"]
+
+
