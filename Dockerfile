@@ -23,7 +23,7 @@ RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install -y nodejs
 
 WORKDIR /app
-ADD . /app
+COPY . /app
 
 RUN gem install middleman
 
@@ -34,8 +34,6 @@ RUN bundle install
 EXPOSE 4567
 
 RUN npm install 
-
-
 
 ENV RUBYOPT="-KU -E utf-8:utf-8"
 CMD ["bash"]
