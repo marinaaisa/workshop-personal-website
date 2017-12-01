@@ -12,7 +12,6 @@ gem 'middleman4-sprockets3-sassc', '~> 0.0.4'
 gem 'middleman-autoprefixer'
 gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 gem 'middleman-pry'
-# gem 'middleman-email', git: "git@github.com:MarsBased/middleman-email.git"
 
 source 'https://rails-assets.org' do
 	gem 'rails-assets-jquery'
